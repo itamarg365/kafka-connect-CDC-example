@@ -13,6 +13,6 @@ insert into customers (username,password,email,created_on,last_login)
  insert into customers (username,password,email,created_on,last_login) 
  values ('user1','pass3','user1@gmail.com',current_timestamp,current_timestamp),
  		('user2','pass3','user2@gmail.com',current_timestamp,current_timestamp),
- 		('user3','pass4','user3@gmail.com',current_timestamp,current_timestamp);
+ 		('david','pass4','user3@gmail.com',current_timestamp,current_timestamp);
 
-update table customers set password='newpass' where username='user1';
+update customers set password='newpass' where username='david';

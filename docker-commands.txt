@@ -6,4 +6,8 @@ docker run -it --name psql --link postgres:postgres \
 --rm postgres sh -c 'psql -h postgres -U postgres -d postgres';
 
 docker run -it --network kafkaconnectcdcexample_default --name psql \
---link postgres:postgres --rm postgres sh -c 'psql -h postgres -U postgres -d cdc'
+--link postgres:postgres --rm postgres sh -c 'psql -h postgres -U postgres -d cdc';
+
+docker run -d --rm --name=elasticsearch -p 9200:9200 -p 9300:9300 \
+-e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" \
+--network=kafkaconnectcdcexample_default elasticsearch:7.8.0
