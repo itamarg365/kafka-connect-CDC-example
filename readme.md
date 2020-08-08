@@ -28,7 +28,7 @@ Wait a few minute and then you can check that all the services are up.
 
 I recommends to enter the [Control Center](http://localhost:9021) and see that everithing is OK. it should look like this:
 
-![control-img.png](/control-img.png)
+![control-img.png](./control-img.png)
 > Note that the cluster mark as "Unhealthy" because it has less then 3 brokers.
 
 Next let's verify that postgres and ES started fine.
