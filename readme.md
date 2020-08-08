@@ -1,14 +1,13 @@
 # Kafka connect CDC example from Postgresql to ElasticSearch
 
 
-*//add short description...*
+In this project we are going to sync a table in Postgresql with ElasticSerach index, such that every change in the table will change the index too. For the sync we will use kafka connect.
 
-## Getting started
-
-
-dependencies
+dependencies:
 * Docker
 * Curl or any other tool for sending http requests
+
+## Getting started
 
 
 Clone repo, cd into directory, and checkout appropriate branch.
