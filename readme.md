@@ -1,22 +1,19 @@
-Kafka connect CDC example from Postgresql to ElasticSearch
-===========================
+# Kafka connect CDC example from Postgresql to ElasticSearch
+
 
 *//add short description...*
 
-Getting started
----------------
+## Getting started
+
 
 dependencies
 * Docker
 * Curl or any other tool for sending http requests
 
 
-Usage 
-------
-
 Clone repo, cd into directory, and checkout appropriate branch.
 
-###setup
+### setup
 
 From the kafka-connect-CDC-example directory:
 
@@ -48,7 +45,7 @@ Type "help" for help.
 
 cdc=#
 ```
-###create the Connectors
+### create the Connectors
 We going to have 2 connectors. One is a source who read from Postgres, the other one is a sink connector who insert the data into ES. To create them we will use curl:
 
 Postgres source:
@@ -111,7 +108,7 @@ where username='user1';
 The records will be updated in our ES!
 
 
-### Services list
+## Services list
 
 | service        | address               |
 |----------------|-----------------------|
