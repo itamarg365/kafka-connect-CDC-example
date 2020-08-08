@@ -3,8 +3,9 @@
   "config": {
     "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
     "tasks.max": "1",
+    "topics": "dbserver.public.customers",
+
     "transforms": "unwrap, key",
-    "topics": "dbserver2.public.customers",
     "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
     "transforms.unwrap.drop.tombstones": "false",
     "transforms.key.type": "org.apache.kafka.connect.transforms.ExtractField$Key",
@@ -14,6 +15,10 @@
     "key.ignore": "false",
     "schema.ignore": "false",
     "behavior.on.null.values": "delete",
-    "transforms.unwrap.drop.deletes": "false"
+    "transforms.unwrap.drop.deletes": "false",
+    
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schemas.enable": "true",
+    "key.converter.schema.registry.url": "http://schema-registry:8081"
   }
 }
